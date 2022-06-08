@@ -1,0 +1,27 @@
+@-webkit-keyframes animateRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: #b0aa28;
+    }
+}
+
+@keyframes animateRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: #b0aa28;
+    }
+}
+
+@-webkit-keyframes resetRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: white;
+    }
+}
+
+@keyframes resetRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: white;
+    }
+}

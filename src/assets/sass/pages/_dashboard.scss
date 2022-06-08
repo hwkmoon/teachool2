@@ -1,0 +1,157 @@
+.dashboard {
+    font-size: 3rem;
+    height: 100%;
+    width: 100%;
+    margin: 1rem 0rem;;
+
+    h3 {
+        margin: 0rem 2rem;
+    }
+    &-content {
+        height: 100%;
+        margin: 2rem 2rem;
+        display: grid;
+        grid-template-rows: 40% repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+.monapprentissage {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0rem 1rem;
+    background-color: $color-card;
+    width: calc(100% - 2rem);
+
+    h4 {
+        margin: .5rem;
+    }
+    &__cards {
+        display: flex;
+        width: 100%;
+        margin: 1rem 0rem ;
+        overflow: scroll;
+        white-space: nowrap;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 7px;
+        }
+    }
+}
+
+.mescertifications {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+    background-color: $color-card;
+    margin-right: 3rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0rem 1rem;
+    h4 {
+        margin: .5rem;
+    }
+    &__cards
+    {
+        width: 100%;
+        height: 90%;
+        // background-color: $color-white;
+        overflow-y: scroll;
+        white-space: nowrap;
+    }
+}
+
+.agenda {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: $color-card;
+    margin-left: 3rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0rem 1rem;
+    h4 {
+        margin: .5rem;
+    }
+
+    &__cards
+    {
+        width: 100%;
+        height: 80%;
+        // background-color: $color-white;
+        overflow-y: scroll;
+        white-space: nowrap;
+    }
+
+}
+
+.logtime {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    background-color: $color-card;
+    margin-left: 3rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0rem 1rem;
+    h4 {
+        margin: .5rem;
+    }
+
+    table {
+        width: 100%
+    };
+    table, tr, th, td {
+        border: 1px solid;
+    }
+
+    th {
+        width: 25%;
+    }
+    &__stats {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        // border: 1px solid;
+        background-color: $color-white;
+        // display: flex;
+    }
+
+    h5 {
+        padding: 0rem 1rem;
+    }
+    &__lastdays {
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__day {
+        text-align: center;
+        background-color: $color-white;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin: .8rem .8rem;
+        font-size: 1.5rem;
+    }
+
+    &__hover {
+        // font-size: 3.5rem;
+    }
+
+    span {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        &:hover {
+            background-color: $color-primary-yellow;
+        }
+    }
+}
+
+
+
+
