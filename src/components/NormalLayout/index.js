@@ -11,10 +11,6 @@ const Layout = () => {
   const shortLong = useSelector((state) => state.layout.shortSidebar);
   const theme = useSelector((state) => state.layout.theme);
 
-  const saveLocalLayout = () => {
-    localStorage.setItem("layout", JSON.stringify(layout));
-  };
-
   const sidebarShort = () => {
     // const main = document.querySelector(".main-content");
     // if (shortLong) main.classList.add("main-content-short");
@@ -33,7 +29,6 @@ const Layout = () => {
   useEffect(() => {
     sidebarShort();
     changeTheme();
-    saveLocalLayout();
   }, [layout]);
 
   return (

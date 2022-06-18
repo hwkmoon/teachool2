@@ -21,6 +21,20 @@
         background-color: $color-header;
     }
 
+    &-course {
+        left: 0;
+        width: 100%;
+        background-color: $color-sidebar;
+
+        .header-left {
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+        }
+        // justify-content: space-evenly;
+    }
+
+
     @media only screen and (max-width: $bp-medium) {
         left: 0;
         width: 100%;
@@ -101,52 +115,8 @@
 }
 
 
-
-
-// #menu-toggle:checked ~ .header .menu-button::before {
-//     margin-top: 0px;
-//     transform: rotate(405deg);
-// }
-
-// #menu-toggle:checked ~ .header .menu-button {
-//     background: rgba(255, 255, 255, 0);
-// }
-  
-// #menu-toggle:checked ~ .header .menu-button::after {
-//     margin-top: 0px;
-//     transform: rotate(-405deg);
-// }
-
-// #menu-toggle:checked ~ .sidebar {
-//     width: 4%;
-// }
-
-// #menu-toggle:checked ~ .header {
-//     width: 96%;
-//     left: 4%;
-// }
-
-// #menu-toggle:checked ~ .sidebar .logo__title {
-//     display: none
-// }
-
-// #menu-toggle:checked ~ .sidebar .sidebar__item {
-//     display: flex;
-//     justify-content: center;
-// }
-
-// #menu-toggle:checked ~ .sidebar .sidebar__item-name {
-//     display: none;
-// }
-
-// #menu-toggle:checked ~ .sidebar .sidebar__item-icon {
-//     font-size: 2.5rem;
-// }
-
-
 .settings {
     display: flex;
-    // width: 0rem;
     align-items: center;
     justify-content: flex-end;
     font-size: 2.8rem;

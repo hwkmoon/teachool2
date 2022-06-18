@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 // Layout //
 import NormalLayout from "../components/NormalLayout";
 import TeacherLayout from "../components/TeacherLayout";
+import CourseLayout from "../components/CourseLayout";
 
 // Pages //
 
@@ -12,13 +13,13 @@ import {
   Mescours,
   Mescertifications,
   Nosformations,
-  Cours,
+  CoursP,
   Communication,
-  ModifierCours,
   Description,
   Programme,
   Tarification,
   Messages,
+  Cours,
 } from "../pages";
 
 // Auth
@@ -42,8 +43,8 @@ const userRoutes = [
 ];
 
 const teacherRoutes = [
-  { path: "/", component: Cours, layout: TeacherLayout },
-  { path: "cours", component: Cours, layout: TeacherLayout },
+  { path: "/", component: CoursP, layout: TeacherLayout },
+  { path: "cours", component: CoursP, layout: TeacherLayout },
   {
     path: "cours/modifier/:courseId",
     component: Description,
@@ -76,4 +77,8 @@ const teacherRoutes = [
   },
 ];
 
-export { authRoutes, userRoutes, teacherRoutes };
+const courseRoutes = [
+  { path: ":courseId/:courseName", component: Cours, layout: CourseLayout },
+];
+
+export { authRoutes, userRoutes, teacherRoutes, courseRoutes };

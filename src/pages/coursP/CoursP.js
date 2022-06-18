@@ -5,23 +5,15 @@ import Trier from "../common/Trier";
 import Formation from "./Formation";
 import NouveauCours from "./NouveauCours";
 
-const Cours = () => {
+const CoursP = () => {
   const courses = useSelector((state) => state.courses);
 
-  // const saveLocalCourses = () => {
-  //   localStorage.setItem("courses", JSON.stringify(courses));
-  // };
-
-  // useEffect(() => {
-  //   saveLocalCourses();
-  // }, [courses]);
-
   return (
-    <div className="cours">
+    <div className="coursp">
       <h3 className="heading-3">COURS</h3>
-      <div className="cours-content">
-        <div className="cours__features">
-          <div className="cours__input">
+      <div className="coursp-content">
+        <div className="coursp__features">
+          <div className="coursp__input">
             <Trier />
             <Search />
           </div>
@@ -46,4 +38,4 @@ const Cours = () => {
   );
 };
 
-export default Cours;
+export default CoursP;

@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 
 const NouveauCours = () => {
   const courses = useSelector((state) => state.courses);
-
   const dispatch = useDispatch();
 
   const [open, setOpen] = useState(false);
@@ -38,7 +37,7 @@ const NouveauCours = () => {
 
   return (
     <>
-      <button className="cours__btn" onClick={handleOpen}>
+      <button className="coursp__btn" onClick={handleOpen}>
         Nouveau cours
       </button>
       <Modal
@@ -47,7 +46,7 @@ const NouveauCours = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className="cours__modal">
+        <Box className="coursp__modal">
           <h3 className="heading-3" id="modal-modal-title">
             Nouveau cours
           </h3>

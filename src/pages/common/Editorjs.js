@@ -8,17 +8,18 @@ import Quote from "@editorjs/quote";
 import CodeTool from "@editorjs/code";
 import SimpleImage from "@editorjs/simple-image";
 
-const Editorjs = ({ editorId, editorData, dispatcher }) => {
+const Editorjs = ({ editorId, editorData, dispatcher, editorClass }) => {
   const ejInstance = useRef();
-  console.log(editorId);
 
   useEffect(() => {
     if (!ejInstance.current) {
       initEditor();
     }
     return () => {
-      ejInstance.current.destroy();
-      ejInstance.current = null;
+      if (ejInstance.current) {
+        ejInstance.current.destroy();
+        ejInstance.current = null;
+      }
     };
   }, []);
 
@@ -56,7 +57,7 @@ const Editorjs = ({ editorId, editorData, dispatcher }) => {
       },
     });
   };
-  return <div id={editorId}></div>;
+  return <div className={editorClass} id={editorId}></div>;
 };
 
 export default Editorjs;

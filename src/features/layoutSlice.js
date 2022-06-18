@@ -1,13 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState =
-  localStorage.getItem("layout") === null
-    ? {
-        theme: "day",
-        isMobile: false,
-        shortSidebar: false,
-      }
-    : JSON.parse(localStorage.getItem("layout"));
+const getStore = JSON.parse(localStorage.getItem("store"));
+let initialState = {
+  theme: "day",
+  isMobile: false,
+  shortSidebar: false,
+};
+if (getStore) JSON.parse(localStorage.getItem("store")).layout;
 
 export const layoutSlice = createSlice({
   name: "layout",

@@ -2,7 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Imports Routes
-import { userRoutes, authRoutes, teacherRoutes } from "./routes/allRoutes";
+import {
+  userRoutes,
+  authRoutes,
+  teacherRoutes,
+  courseRoutes,
+} from "./routes/allRoutes";
 
 // Import all middleware
 import Authmiddleware from "./routes/middleWare/Authmiddleware";
@@ -12,6 +17,7 @@ import { NoMatch } from "./pages";
 // Layout //
 import NormalLayout from "./components/NormalLayout";
 import TeacherLayout from "./components/TeacherLayout";
+import CourseLayout from "./components/CourseLayout";
 
 // CSS injection order to gives MUI precedence over custom styles
 import { StyledEngineProvider } from "@mui/material/styles";
@@ -49,6 +55,17 @@ const App = () => {
                   />
                 );
               }
+            })}
+          </Route>
+          <Route path="/cours" element={<CourseLayout />}>
+            {courseRoutes.map((route, idx) => {
+              return (
+                <Route
+                  key={idx}
+                  path={route.path}
+                  element={<route.component />}
+                />
+              );
             })}
           </Route>
           <Route path="*" element={<NoMatch />} />

@@ -8,7 +8,7 @@ import Profile from "./authentification/Profile";
 
 // Partie eleve
 // cours
-import Mescours from "./cours/Mescours";
+import Mescours from "./mescours/Mescours";
 // certifications
 import Mescertifications from "./certifications/Mescertifications";
 // formations
@@ -18,13 +18,15 @@ import Nosformations from "./formations/Nosformations";
 import NoMatch from "./errors/NoMatch";
 
 // Partie formateur
-import Cours from "./coursP/Cours";
+import CoursP from "./coursP/CoursP";
 import Communication from "./communication/Communication";
-import ModifierCours from "./coursP/ModifierCours";
-import Description from "./coursP/Description";
-import Programme from "./coursP/Programme";
-import Tarification from "./coursP/Tarification";
-import Messages from "./coursP/Messages";
+import Description from "./coursP/modifier/Description";
+import Programme from "./coursP/modifier/Programme";
+import Tarification from "./coursP/modifier/Tarification";
+import Messages from "./coursP/modifier/Messages";
+
+// Partie cours
+import Cours from "./cours/Cours";
 
 export {
   Dashboard,
@@ -35,12 +37,12 @@ export {
   Mescours,
   Mescertifications,
   Nosformations,
-  Cours,
+  CoursP,
   Communication,
   NoMatch,
-  ModifierCours,
   Description,
   Programme,
   Tarification,
   Messages,
+  Cours,
 };

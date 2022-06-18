@@ -23,7 +23,7 @@ const Layout = () => {
   }, [layout]);
 
   return (
-    <div className="container">
+    <div className="container container-course">
       <Header />
       <Sidebar />
       <div className="main-content">
